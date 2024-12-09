@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 user = 'test'
 password = 'Password1234'
 
+google_api_token = "AIzaSyAQfxPJiounkhOjODEO5ZieffeBv6yft2Q"
+
 # main
 if __name__ == '__main__':
 
