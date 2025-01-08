@@ -101,7 +101,7 @@ jobs:
    
     # from Chad's action
     - name: Upload PDF as Workflow artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: security-report
         path: ${{ github.workspace }}/results/*.pdf
