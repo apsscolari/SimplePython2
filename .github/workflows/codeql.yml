@@ -90,3 +90,8 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
+
+    - name: Create the PDF Reports
+      uses: github/peter-murray/github-security-report-action@v2
+      with:
+        token: ${{ secrets.PAT_TOKEN}}
