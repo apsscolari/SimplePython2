@@ -103,8 +103,6 @@ jobs:
       with:
         name: security-report
         path: ${{ github.workspace }}/results/*.pdf
-        outputDir: ${{ github.workspace }}/results
-        repository: ${{ github.repository }}
     
     # old APS
     # - name: Download all workflow run artifacts
