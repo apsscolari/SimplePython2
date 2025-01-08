@@ -96,8 +96,6 @@ jobs:
       with:
         token: ${{ secrets.PAT_TOKEN}}
         sarifReportDir: ../results
-        outputDir: ${{ github.workspace }}/results
-        repository: ${{ github.repository }}
    
     # from Chad's action
     - name: Upload PDF as Workflow artifact
