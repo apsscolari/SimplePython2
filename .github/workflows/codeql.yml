@@ -91,10 +91,23 @@ jobs:
       with:
         category: "/language:${{matrix.language}}"
 
-    - name: Create the PDF Reports
+    - name: Create the Security PDF Reports
       uses: peter-murray/github-security-report-action@v2
       with:
         token: ${{ secrets.PAT_TOKEN}}
-
-    - name: Download all workflow run artifacts
-      uses: actions/download-artifact@v4
+        sarifReportDir: ../results
+        outputDir: ${{ github.workspace }}/results
+        repository: ${{ github.repository }}
+   
+    # from Chad's action
+    - name: Upload PDF as Workflow artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: security-report
+        path: ${{ github.workspace }}/results/*.pdf
+        outputDir: ${{ github.workspace }}/results
+        repository: ${{ github.repository }}
+    
+    # old APS
+    # - name: Download all workflow run artifacts
+    #  uses: actions/download-artifact@v4
