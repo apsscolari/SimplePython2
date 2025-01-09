@@ -102,7 +102,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: security-report
-        path: ${{ github.workspace }}/results/*.pdf
+        path: ${{ github.workspace }}/*.pdf
     
     # old APS
     # - name: Download all workflow run artifacts
