@@ -97,12 +97,12 @@ jobs:
         token: ${{ secrets.PAT_TOKEN}}
         sarifReportDir: ../results
    
-    # from Chad's action
+    # report creation not working, trying to download the sarif to see if I can run the report build locally.
     - name: Upload PDF as Workflow artifact
       uses: actions/upload-artifact@v4
       with:
-        name: reports
-        path: ./*.pdf
+        name: alerts sarif
+        path: ../results/*.*
     
     # old APS
     # - name: Download all workflow run artifacts
