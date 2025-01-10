@@ -102,7 +102,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: alerts sarif
-        path: ../results/*.*
+        path: /home/runner/work/SimplePython/results/python.sarif
     
     # old APS
     # - name: Download all workflow run artifacts
