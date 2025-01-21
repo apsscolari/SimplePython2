@@ -91,18 +91,19 @@ jobs:
       with:
         category: "/language:${{matrix.language}}"
 
-    - name: Create the Security PDF Reports
-      uses: peter-murray/github-security-report-action@v2
-      with:
-        token: ${{ secrets.PAT_TOKEN}}
-        sarifReportDir: ../results
+    # I was not able to make it work in the action, however it did work in the local machine running from the Terminal
+    # - name: Create the Security PDF Reports
+    #   uses: peter-murray/github-security-report-action@v2
+    #   with:
+    #     token: ${{ secrets.PAT_TOKEN}}
+    #     sarifReportDir: ../results
    
-    # report creation not working, trying to download the sarif to see if I can run the report build locally.
-    - name: Upload PDF as Workflow artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: alerts sarif
-        path: /home/runner/work/SimplePython/results/python.sarif
+    # # report creation not working, trying to download the sarif to see if I can run the report build locally.
+    # - name: Upload PDF as Workflow artifact
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: alerts sarif
+    #     path: /home/runner/work/SimplePython/results/python.sarif
     
     # old APS
     # - name: Download all workflow run artifacts
