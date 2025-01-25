@@ -12,3 +12,8 @@ google_api_token = "AIzaSyAQfxPJiounkhOjODEO5ZieffeBv6yft2Q"
 if __name__ == '__main__':
 
     print('hello Github world')
+
+# critical vuln example
+user_input = input("Enter filename: ")
+with open(user_input, 'r') as file:  # Vulnerable to directory traversal
+    content = file.read()
