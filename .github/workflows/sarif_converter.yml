@@ -15,7 +15,7 @@ jobs:
 
       - uses: airtower-luna/convert-to-sarif@main
         with:
-          tool: 'Sonarqube'
+          tool: 'Sonar'
           input_file: 'report.xml'
           sarif_file: 'report.sarif'
       
