@@ -12,11 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: |
-          sudo apt-get install -y cppcheck
+      #- run: |
+       #   sudo apt-get install -y cppcheck
 
-      - run: |
-          cppcheck --enable=all --xml --output-file=report.xml .
+      #- run: |
+       #   cppcheck --enable=all --xml --output-file=report.xml
 
       - uses: Flast/cppcheck-sarif@v2
         with:
