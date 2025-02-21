@@ -13,6 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # this does not work for sonar, not a valid option to convert from 
       - uses: airtower-luna/convert-to-sarif@main
         with:
           tool: 'CppCheck'
