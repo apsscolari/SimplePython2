@@ -1,7 +1,6 @@
 name: cppcheck
 
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   upload-sarif:
@@ -11,7 +10,6 @@ jobs:
       actions: read
       contents: read
     steps:
-      - name: "check out the source code"
       - uses: actions/checkout@v4
 
       - run: |
