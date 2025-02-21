@@ -11,17 +11,14 @@ jobs:
       contents: read
 
     steps:
-      - name: "check out repo files"
       - uses: actions/checkout@v4
 
-      - name: "run the converter"
       - uses: airtower-luna/convert-to-sarif@main
         with:
           tool: 'Sonarqube'
           input_file: 'report.xml'
           sarif_file: 'report.sarif'
       
-      - name: "upload the converted file"
       - uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: report.sarif
