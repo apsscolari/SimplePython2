@@ -3,5 +3,10 @@ name: "My CodeQL config"
 paths:
   - src
 paths-ignore:
-  - src/node_modules
-  - '**/*.test.js'
+  - src/mocks/msw/**
+  - src/**/test/**
+  - src/**/spec/**
+  - src/**/features/**
+  - src/**/*_test.rb
+  - src/**/*_spec.rb
+  - '**/*.spec.ts'
