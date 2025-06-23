@@ -1,1 +1,1 @@
-# SimplePython
+# SimplePython - to kick codeQL 
